@@ -1,0 +1,33 @@
+header {
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    background-color: #222;
+    color: #F7EFE8;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#075878;;
+  }
+  
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+nav a {
+    color: #F7EFE8;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    padding:8px 15px;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #F7EFE8;
+    color:#222
+  }

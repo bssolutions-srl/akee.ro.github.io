@@ -1,28 +1,58 @@
-body {
-    background-color: #1DB954;
-}
-.social-bar {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: transparent; /* sau un alt fundal */
-  padding: 10px 5px;
-  z-index: 999;
-}
 
-.social-bar a {
-  margin: 10px 0;
-  color: white; /* sau altă culoare */
-  font-size: 20px;
-  text-decoration: none;
-  transition: transform 0.3s, color 0.3s;
-}
+    .social-bar {
+      position: fixed;
+      top: 45%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+    }
 
-.social-bar a:hover {
-  transform: scale(1.2);
-  color: #1DB954; /* exemplu pentru hover verde (Spotify) */
-}
+    .line {
+      width: 1px;
+      background-color: #F7EFE8;
+    }
+
+    .line.top {
+      height: 15vh;
+      margin-bottom: 20px;
+    }
+
+    .line.bottom {
+      height: 15vh;
+      margin-top: 20px;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .icons a {
+        color: #F7EFE8;
+        font-size: 22px;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .icons a:hover {
+        transform: scale(1.3);
+    }
+
+    /* Culoare oficială pe hover */
+    .icons a.facebook:hover {
+        color: #1877F2;
+    }
+    .icons a.instagram:hover {
+        color: #E1306C;
+    }
+    .icons a.youtube:hover {
+        color: #FF0000;
+    }
+    .icons a.spotify:hover {
+        color: #1DB954;
+    }

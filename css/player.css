@@ -1,0 +1,14 @@
+.bottom-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* culoare în stil Spotify */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+  z-index: 1001;
+}
+
+.bottom-player iframe {
+  border: none;
+  height: 80px;
+  width: 100%;
+}

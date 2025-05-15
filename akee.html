@@ -1,21 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Bar Fixed Right</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Bar cu Linie Corectă</title>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome CDN -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/akee.css"/>
+  <link rel="stylesheet" href="./css/socials.css"/>
+  <link rel="stylesheet" href="./css/player.css"/>
+  <link rel="stylesheet" href="./css/header.css"/>
 </head>
 <body>
+    <header>
+        <h1 id="site-title">Akee</h1>
+        <nav>
+          <a href="#despre" id="nav-about">About Me</a>
+          <a href="#servicii" id="nav-portfolio">Services</a>
+          <a href="#Buy Beats" id="nav-contact">Buy Beats</a>
+        </nav>
+      </header>
+    <section id="despre">
+        <div class="descriere-about-me">
+            <h2>About me</h2>
+            <p>Eu sunt akee si sunt super cool si smecher si imi place de ema si lucrez la 5 to go si fac beaturi smechere sigur vrei sa le cumperi RAAAAAAAAAH 🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅</p>
+        </div>
+        <div class="descriere-about-me_image">
+            <img src="./img/logo_transparent.png" alt="logo"/>
+        </div>
+    </section>
+    
+    <section>
+        <div class="descriere-about-me" data-aos="fade-in">
+            <h2>About me</h2>
+            <p>Eu sunt akee si sunt super cool si smecher si imi place de ema da lucrez la 5 to go si fac beaturi smechere sigur vrei sa le cumperi RAAAAAAAAAH 🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅🦅</p>
+        </div>
+        <div class="descriere-about-me_image" data-aos="fade-down">
+            <img src="./img/logo_transparent.png" alt="logo"/>
+        </div>
+    </section>
 
-  <div class="social-bar">
-    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
-  </div>
+    <div class="social-bar">
+        <div class="line top"></div>
+        <div class="icons">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="spotify"><i class="fab fa-spotify"></i></a>
+        </div>
+        <div class="line bottom"></div>
+    </div>
 
+    <div class="bottom-player">
+        <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/5tdzGPjTtlCqm5ixrG4HQb?utm_source=generator" 
+            width="100%" 
+            height="152" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+        </iframe>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,     // viteza animatiei in ms
+            once: true,        // animatia se intampla o singura data
+        });
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                const topOffset = document.querySelector('header').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - topOffset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
