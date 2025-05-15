@@ -2,13 +2,12 @@ header {
     position: sticky;
     top:0;
     z-index: 1000;
-    background-color: #222;
+    background-color: #111;
     color: #F7EFE8;
     padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#075878;;
   }
   
 header h1 {
