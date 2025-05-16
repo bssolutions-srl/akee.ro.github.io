@@ -13,14 +13,14 @@ html {
 body {
     margin: 0;
     background: url("../img/background.png");
-    height: 250vh;
+    height: calc(190vh + 800px) !important;
 }
 section {
       display: flex;
       align-items: center;
       padding: 12vh 8%;
       gap: 6rem;
-      height: 80vh;
+      height: 90vh;
       flex-direction: row-reverse;
       margin-left:-10%;
       scroll-snap-align: center;
@@ -37,7 +37,7 @@ section {
     .descriere-about-me h2 {
       color:#F7EFE8;
       padding: 1rem 5rem;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     .descriere-about-me p {
       padding: 10px 5rem;

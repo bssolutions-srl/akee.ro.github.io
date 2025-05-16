@@ -4,9 +4,12 @@
   left: 0;
   width: 100%; 
   z-index: 1001;
+  display:flex;
+  flex-flow:column
 }
 
 .bottom-player iframe {
+  margin-bottom:0;
   border: none;
   height: 80px;
   width: 100%;
@@ -15,9 +18,12 @@
   cursor: pointer;
   background-color: transparent;
   border:0;
-  width:15px;
+  width:30px;
   height:15px;
   margin-left:1%;
   display:flex;
   margin-bottom:10px;
+}
+.extend_button img {
+  width:100%;
 }

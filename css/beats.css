@@ -1,0 +1,8 @@
+#buy_beats {
+    height: 700px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    justify-self:center;
+    margin-left:2%;
+}

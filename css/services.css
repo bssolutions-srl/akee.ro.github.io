@@ -10,7 +10,7 @@
     justify-content: center;
 }
   .card {
-    height:45vh;
+    height:20rem;
     border: 1px solid #F7EFE8;
     padding: 20px;
     border-radius: 8px;
@@ -30,7 +30,7 @@
     font-size: 126%;
   }
   .card p {
-    line-height:2rem;
+    line-height:1.8rem;
   }
     .service_icon {
     margin-right: 10px;
