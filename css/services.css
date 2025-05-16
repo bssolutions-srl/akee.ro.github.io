@@ -1,0 +1,40 @@
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10%;
+    margin-top: 20px;
+    width:70%;
+    margin-left:10%;
+  }
+#servicii {
+    justify-content: center;
+}
+  .card {
+    height:45vh;
+    border: 1px solid #F7EFE8;
+    padding: 20px;
+    border-radius: 8px;
+    color:#F7EFE8;
+  }
+  .card_title {
+    width:100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px; /* spațiu între titlu și iconiță */
+  }
+  
+  .card_title h3 {
+    margin-right: 0; /* elimină marginile implicite dacă vrei o aliniere mai curată */
+    font-size: 126%;
+  }
+  .card p {
+    line-height:2rem;
+  }
+    .service_icon {
+    margin-right: 10px;
+    margin-top: -7px;
+    width: 50px;
+    height: 50px;
+  }

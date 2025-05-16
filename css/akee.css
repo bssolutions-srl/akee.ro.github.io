@@ -13,12 +13,11 @@ html {
 body {
     margin: 0;
     background: url("../img/background.png");
-    height: 300vh;
+    height: 240vh;
 }
 section {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 12vh 8%;
       gap: 6rem;
       height: 80vh;
@@ -26,6 +25,9 @@ section {
       margin-left:-10%;
       scroll-snap-align: center;
     }
+  #descriere {
+          justify-content: space-between;
+  }
     .descriere-about-me {
         border-radius: 3rem;
         overflow: hidden;
