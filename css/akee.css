@@ -1,3 +1,9 @@
+html {
+        scroll-snap-type: proximity;
+        scroll-snap-points-y: repeat(80vh);
+        scroll-snap-type: y proximity;
+        scroll-behavior: smooth;
+    }
 * {
       box-sizing: border-box;
       margin: 0;
@@ -15,9 +21,10 @@ section {
       justify-content: space-between;
       padding: 12vh 8%;
       gap: 6rem;
-      height: 90vh;
+      height: 80vh;
       flex-direction: row-reverse;
       margin-left:-10%;
+      scroll-snap-align: center;
     }
     .descriere-about-me {
         border-radius: 3rem;
@@ -61,34 +68,24 @@ section {
       }
     }
 
+
 #logo {
   z-index: 1000;
-    position: absolute;
-    width:30rem;
-    height:30rem;
-    left: 5%;
-    top: 10%; /* Start position */
-    transition: top 0.5s ease;
-    padding: 10px;
-    animation: moveToHeader 2s ease-in-out forwards;
-  }
+  position: absolute;
+  width: 70vh;
+  height: 70vh;
+  left: 7%;
+  top: 12%;
+  transition: all 0.5s ease;
+}
 
-  @keyframes moveToHeader{
-    0% {
-      top:10%;
-      left:5%;
-      height:30rem;
-      width:30rem;
-    }
-    100% {
-      left:50%;
-      top:-50px;
-      height:150px;
-      width:150px;
-      transform: translateX(-50%);
-      position:fixed;
-    }
-  }
-
+#logo.scrolled {
+  position: fixed;
+  left: 50%;
+  top: -55px;
+  height: 150px;
+  width: 150px;
+  transform: translateX(-50%);
+}
 /* După animație, adaugă această clasă din JavaScript */
 

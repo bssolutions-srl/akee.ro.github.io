@@ -1,7 +1,7 @@
 header {
     position: sticky;
     top:0;
-    z-index: 1000;
+    z-index: 1002;
     background-color: #111;
     color: #F7EFE8;
     padding: 10px 40px;
@@ -28,5 +28,6 @@ nav a {
   
   nav a:hover {
     background-color: #F7EFE8;
-    color:#222
+    color:#222;
+    cursor:pointer;
   }
