@@ -1,7 +1,7 @@
 html {
-        scroll-snap-type: proximity;
+        scroll-snap-type: mandatory;
         scroll-snap-points-y: repeat(80vh);
-        scroll-snap-type: y proximity;
+        scroll-snap-type: y mandatory;
         scroll-behavior: smooth;
     }
 * {

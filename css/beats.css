@@ -6,3 +6,8 @@
     justify-self:center;
     margin-left:2%;
 }
+@media (min-width: 1500px) {
+    #buy_beats iframe {
+        height: 700px;
+    }
+}
