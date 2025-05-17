@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    #buy_beats {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        justify-self:center;
+    }
+    #buy_beats iframe {
+        height: 500px;
+    }
+}

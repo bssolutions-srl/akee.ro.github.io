@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100%; 
-  z-index: 1001;
+  z-index: 1005;
   display:flex;
   flex-flow:column
 }
@@ -26,4 +26,9 @@
 }
 .extend_button img {
   width:100%;
+}
+@media (max-width: 768px) {
+    .bottom-player {
+      bottom:20px;
+    }
 }

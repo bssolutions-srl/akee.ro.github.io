@@ -1,0 +1,94 @@
+@media (max-width: 768px) {
+  html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: auto;
+  /* `scroll-snap-points-y` is deprecated, remove it */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Futura', sans-serif;
+}
+html {
+  background: url("../img/background.png")
+}
+body {
+  margin: 0;
+  background: url("../img/background.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  height: calc(210vh + 800px) !important;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12vh 8%;
+  gap: 3rem;
+  height: 100vh;
+  flex-direction: row-reverse;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  margin-left: 0; /* Remove negative margin on mobile */
+}
+#despre {
+  scroll-snap-align: start;
+}
+#descriere {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.descriere-about-me {
+  border-radius: 3rem;
+  overflow: hidden;
+  width: 50%;
+  min-width: 300px;
+}
+
+.descriere-about-me h2 {
+  display: none;
+}
+
+.descriere-about-me p {
+  margin-top: 30%;
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  color: #F7EFE8;
+  text-align: center;
+}
+
+.descriere-about-me_image {
+  flex: 1;
+  width: 50%;
+  min-width: 300px;
+}
+
+.descriere-about-me_image img {
+  width: 100%;
+  border-radius: 1rem;
+  height: auto;
+}
+
+#logo {
+  position: absolute;
+  width: 20rem;
+  top: 33%;
+  left:9%;
+}
+
+#logo.scrolled {
+  z-index: 1000;
+  position: absolute;
+  width: 20rem;
+  left:9%;
+  top: 33%;
+  transform: none;
+}
+
+}

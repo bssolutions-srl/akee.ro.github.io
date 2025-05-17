@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .social-bar {
+    z-index: 999;
+    position: absolute;
+    bottom: auto;
+    top: 22%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 12px;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .line.top, .line.bottom {
+    display: none; /* ascund liniile decorative */
+  }
+
+  .icons {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .icons a {
+    font-size: 20px;
+  }
+}

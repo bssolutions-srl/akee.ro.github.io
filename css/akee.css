@@ -1,6 +1,5 @@
 html {
         scroll-snap-type: mandatory;
-        scroll-snap-points-y: repeat(80vh);
         scroll-snap-type: y mandatory;
         scroll-behavior: smooth;
     }
@@ -55,38 +54,22 @@ section {
       border-radius: 1rem;
     }
 
-     @media (max-width: 768px) {
-      section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      section:nth-child(even) {
-        flex-direction: column;
-      }
-
-      .descriere-about-me_image, .descriere-about-me {
-        width: 100%;
-      }
-    }
 
 
 #logo {
   z-index: 1000;
   position: absolute;
   width: 70vh;
-  height: 70vh;
   left: 7%;
-  top: 12%;
+  top: 43%;
   transition: all 0.5s ease;
 }
 
 #logo.scrolled {
   position: fixed;
   left: 50%;
-  top: -55px;
-  height: 150px;
-  width: 150px;
+  top:5px;
+  width: 130px;
   transform: translateX(-50%);
 }
 /* După animație, adaugă această clasă din JavaScript */

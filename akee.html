@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Social Bar cu Linie Corectă</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akee</title>
 
   <!-- Font Awesome CDN -->
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/akee.css"/>
+  <link rel="stylesheet" href="./css/akee_mobile.css"/>
   <link rel="stylesheet" href="./css/socials.css"/>
+  <link rel="stylesheet" href="./css/socials_mobile.css"/>
   <link rel="stylesheet" href="./css/player.css"/>
+  <link rel="stylesheet" href="./css/player_mobile.css"/>
   <link rel="stylesheet" href="./css/header.css"/>
+  <link rel="stylesheet" href="./css/header_mobile.css"/>
   <link rel="stylesheet" href="./css/services.css"/>
+  <link rel="stylesheet" href="./css/services_mobile.css"/>
   <link rel="stylesheet" href="./css/beats.css"/>
+  <link rel="stylesheet" href="./css/beats_mobile.css"/>
 </head>
 <body>
     <header>
@@ -24,7 +30,7 @@
           <a href="#buy_beats" id="nav-contact">BUY BEATS</a>
         </nav>
       </header>
-        <img id="logo" src="./img/logo_transparent.png" alt="logo"/>
+        <img id="logo" src="./img/logo_transparent_trimmed.png" alt="logo"/>
    
     <section id="despre" style="margin-top:1%">
         <div class="descriere-about-me">
@@ -60,7 +66,12 @@
     <section id="buy_beats">
         <iframe src="https://player.beatstars.com/?storeId=150504" width="100%" height="400" > -- none -- </iframe>
     </section>
-    <div class="social-bar">
+
+    <div class="bottom-player">
+        <button class="extend_button" onclick="toggleIframeHeight()"><img src="./img/up.png"></button>
+        <iframe id="myIframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5tdzGPjTtlCqm5ixrG4HQb?utm_source=generator&theme=0" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+        <div class="social-bar">
         <div class="line top"></div>
         <div class="icons">
             <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -70,11 +81,6 @@
         </div>
         <div class="line bottom"></div>
     </div>
-
-    <div class="bottom-player">
-        <button class="extend_button" onclick="toggleIframeHeight()"><img src="./img/up.png"></button>
-        <iframe id="myIframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5tdzGPjTtlCqm5ixrG4HQb?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -83,6 +89,32 @@
         });
     </script>
     <script>
+        function fixScrollUpdateSafariIOs() {
+            const isIosSafari = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/);
+            // Check if it's an iOS device and Safari
+            const isMobileSafari = isIosSafari && window.innerWidth < 768;
+            if (isMobileSafari) {
+                (function () {
+                    // Create a hidden log div
+                    const logDiv = document.createElement('div');
+                    logDiv.style.height = '0px'; // Set the height to 0 pixels
+                    logDiv.style.overflow = 'hidden'; // Hide the content
+                    document.body.appendChild(logDiv);
+
+                    // Function to update the log with the scroll position
+                    function updateLog() {
+                        logDiv.innerHTML = window.scrollY.toFixed(0);
+                    }
+
+                    // Add listeners for scroll and touch events
+                    window.addEventListener('scroll', updateLog, { passive: true, capture: true });
+                    window.addEventListener('touchstart', updateLog, { passive: true, capture: true });
+                    window.addEventListener('touchmove', updateLog, { passive: true, capture: true });
+                    window.addEventListener('touchend', updateLog, { passive: true, capture: true });
+                })();
+            }
+        }
+        fixScrollUpdateSafariIOs();
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -98,15 +130,16 @@
                     const viewportCenter = window.innerHeight / 2 + window.pageYOffset;
 
                     // Scroll position so target center aligns with viewport center adjusted by header height
-                    const scrollToPosition = targetCenter - (window.innerHeight / 2) + headerHeight / 2;
-
-                    window.scrollTo({
-                        top: scrollToPosition,
-                        behavior: 'smooth'
-                    });
+                    const scrollToPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                        window.scrollTo({
+                            top: scrollToPosition,
+                            behavior: 'smooth'
+                        });
                 }
             });
-        });
+        }); 
+
     </script>
     <script src="./js/player.js"></script>
     <script src="./js/logo-move.js"></script>
