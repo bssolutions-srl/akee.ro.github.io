@@ -3,8 +3,7 @@
   scroll-snap-type: y proximity;
   scroll-behavior: auto;
   /* `scroll-snap-points-y` is deprecated, remove it */
-}
-
+  }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -38,57 +37,42 @@ section {
   scroll-snap-align: start;
 }
 #descriere {
-  justify-content: center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
 .descriere-about-me {
-  border-radius: 3rem;
+  align-items:center;
+  border-radius: 2rem;
   overflow: hidden;
   width: 50%;
   min-width: 300px;
-}
-
-.descriere-about-me h2 {
-  display: none;
-}
-
-.descriere-about-me p {
-  margin-top: 30%;
-  padding: 1rem 2rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
-  line-height: 1.8;
-  color: #F7EFE8;
-  text-align: center;
-}
-
-.descriere-about-me_image {
-  flex: 1;
-  width: 50%;
-  min-width: 300px;
-}
-
-.descriere-about-me_image img {
-  width: 100%;
-  border-radius: 1rem;
-  height: auto;
+  margin-right:0;
 }
 
 #logo {
   position: absolute;
   width: 20rem;
-  top: 33%;
-  left:9%;
+  top: 13%;
+  left:0;
+  right:0;
+  margin:auto;
+  text-align: center;
 }
 
 #logo.scrolled {
   z-index: 1000;
   position: absolute;
   width: 20rem;
-  left:9%;
-  top: 33%;
+  margin:auto;
+  left:0;
+  right:0;
+  top: 13%;
   transform: none;
+  text-align: center;
 }
 
 }

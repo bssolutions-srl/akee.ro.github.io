@@ -1,13 +1,14 @@
 header {
-    position: sticky;
-    top:0;
-    z-index: 1000;
-    background-color: #111;
+    position: fixed;
+    top:20px;
+    z-index: 1020;
+    background-color: transparent;
     color: #F7EFE8;
-    padding: 10px 40px;
+    padding: 12px 40px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    width:100%;
   }
   
 header h1 {

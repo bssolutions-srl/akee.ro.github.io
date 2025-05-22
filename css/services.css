@@ -4,17 +4,18 @@
     gap: 10%;
     margin-top: 20px;
     width:70%;
-    margin-left:10%;
+    margin-left:7%;
   }
 #servicii {
     justify-content: center;
 }
   .card {
-    height:20rem;
+    height:25rem;
     border: 1px solid #F7EFE8;
-    padding: 20px;
+    padding: 20px 70px;
     border-radius: 8px;
     color:#F7EFE8;
+    width:120%;
   }
   .card_title {
     width:100%;

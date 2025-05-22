@@ -2,6 +2,8 @@ html {
         scroll-snap-type: mandatory;
         scroll-snap-type: y mandatory;
         scroll-behavior: smooth;
+        margin-top:-20px;
+        height:calc(230vh + 500px) !important;
     }
 * {
       box-sizing: border-box;
@@ -11,66 +13,52 @@ html {
     }
 body {
     margin: 0;
-    background: url("../img/background.png");
-    height: calc(190vh + 800px) !important;
+    background: black;
+    height: calc(230vh + 500px) !important;
 }
 section {
       display: flex;
       align-items: center;
       padding: 12vh 8%;
       gap: 6rem;
-      height: 90vh;
+      margin-bottom:10%;
+      height: 100vh;
       flex-direction: row-reverse;
       margin-left:-10%;
       scroll-snap-align: center;
     }
   #descriere {
-          justify-content: space-between;
+
+    justify-content: center;
   }
     .descriere-about-me {
         border-radius: 3rem;
         overflow: hidden;
-        width:50%
-    }
-
-    .descriere-about-me h2 {
-      color:#F7EFE8;
-      padding: 1rem 5rem;
-      font-size: 2rem;
-    }
-    .descriere-about-me p {
-      padding: 10px 5rem;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-      line-height: 2;
-      color:#F7EFE8;
-    }
-
-    .descriere-about-me_image {
-      flex: 1;
-    }
-    .descriere-about-me_image img {
-      width: 100%;
-      border-radius: 1rem;
+        width:35%;
+        margin-right: 2%;
     }
 
 
 
 #logo {
-  z-index: 1000;
-  position: absolute;
+  z-index: 810;
+  position: fixed;
   width: 70vh;
-  left: 7%;
-  top: 43%;
+  left: 12%;
+  top: 37%;
   transition: all 0.5s ease;
 }
 
 #logo.scrolled {
   position: fixed;
   left: 50%;
-  top:5px;
+  top:10px;
   width: 130px;
+  z-index:810;
   transform: translateX(-50%);
 }
 /* După animație, adaugă această clasă din JavaScript */
-
+#vanta-wrapper {
+  position: relative;
+  z-index: 800;
+}

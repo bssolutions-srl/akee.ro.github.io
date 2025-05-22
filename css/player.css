@@ -3,15 +3,16 @@
   bottom: 0;
   left: 0;
   width: 100%; 
-  z-index: 1005;
+  z-index: 1010;
   display:flex;
   flex-flow:column
 }
 
-.bottom-player iframe {
+iframe {
   margin-bottom:0;
   border: none;
-  height: 80px;
+  z-index:1010;
+  height: 70vh;
   width: 100%;
 }
 .extend_button {
