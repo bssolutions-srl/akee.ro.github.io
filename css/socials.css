@@ -1,7 +1,7 @@
 
     .social-bar {
       position: fixed;
-      top: 45%;
+      top: 50%;
       right: 0;
       transform: translateY(-50%);
       width: 100px;

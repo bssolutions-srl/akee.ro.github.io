@@ -43,6 +43,9 @@ section {
   justify-content: flex-end;
   flex-wrap: wrap;
 }
+.title_description {
+  display:none;
+}
 
 .descriere-about-me {
   align-items:center;

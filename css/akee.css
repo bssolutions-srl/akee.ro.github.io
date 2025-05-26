@@ -31,18 +31,28 @@ section {
     .descriere-about-me {
         border-radius: 3rem;
         overflow: hidden;
-        width:35%;
+        width:55%;
         margin-right: 2%;
     }
 
-
+.title_description {
+  z-index: 810;
+  color:white;
+  position: absolute;
+  top:12%;
+  left:12%;
+  bottom:auto;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
 
 #logo {
   z-index: 810;
-  position: absolute;
-  width: 70vh;
-  left: 12%;
-  top: 37%;
+  position: fixed;
+  width: 28vw;
+  left: 5%;
+  top: 30%;
+  bottom:auto;
   transition: all 0.5s ease;
 }
 
