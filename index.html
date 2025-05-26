@@ -61,14 +61,14 @@
                     </div>
                     <p>WE BRING YOUR IDEAS TO LIFE WITH PROFESSIONAL MUSIC PRODUCTION — FROM BEAT TO FULL TRACK.</p>
                 </div>
-                <div class="card" data-aos="fade-up">
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
                     <div class="card_title">
                         <h3>MIX</h3>
                         <img src="img/icon-mixing.png" alt="HTML Icon" class="service_icon" />
                     </div>
                     <p>CLEAN, BALANCED, POWERFUL. OUR MIXING SERVICE MAKES YOUR TRACK SOUND CLEAR AND RADIO-READY.</p>
                 </div>
-                <div class="card" data-aos="fade-up">
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
                     <div class="card_title">
                         <h3>MASTER</h3>
                         <img src="img/master.png" alt="HTML Icon" class="service_icon" />
@@ -129,6 +129,10 @@
             AOS.init({
                 duration: 800,
                 once: true,
+                disable: function () {
+                    // Return true for mobile devices to disable animations
+                    return window.innerWidth < 768;
+                }
             });
 
             // ✅ iOS Safari scroll fix
