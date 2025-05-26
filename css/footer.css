@@ -8,7 +8,7 @@ footer { /* sau culoarea generală de fundal */
 footer .section-title {
     margin-bottom: 20px;
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .footer-contact p {
@@ -33,5 +33,7 @@ footer#contact {
     justify-content: center;
     align-items: center;
     padding: 0 8%;
+    font-weight: 200;
+    font-family: 'Futura', sans-serif;
     color: white;
 }

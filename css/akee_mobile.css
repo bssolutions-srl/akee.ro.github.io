@@ -81,7 +81,8 @@ section {
 }
 .section-title {
   padding-top:10%;
-    font-size: 1rem;
+  width:70vw;
+  font-size: 2rem;
 }
 
 }
