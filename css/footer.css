@@ -1,0 +1,37 @@
+footer { /* sau culoarea generală de fundal */
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+footer .section-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    line-height: 40px;
+    font-size: 1.2rem;
+}
+
+.footer-contact a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+footer#contact {
+    height: 100vh;          /* să fie full viewport, ca secțiunile */
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8%;
+    color: white;
+}

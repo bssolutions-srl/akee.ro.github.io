@@ -74,5 +74,9 @@ section {
   transform: none;
   text-align: center;
 }
+.section-title {
+  padding-top:10%;
+    font-size: 1rem;
+}
 
 }

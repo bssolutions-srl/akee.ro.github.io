@@ -3,7 +3,7 @@ html {
         scroll-snap-type: y mandatory;
         scroll-behavior: smooth;
         margin-top:-20px;
-        height:calc(230vh + 500px) !important;
+        height:calc(230vh + 900px) !important;
     }
 * {
       box-sizing: border-box;
@@ -61,4 +61,15 @@ section {
 #vanta-wrapper {
   position: relative;
   z-index: 800;
+}
+.section-title {
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    color: white;
+    width:50vw;
+    padding-bottom:15px;
+    font-family: 'Futura', sans-serif;
+    border-bottom:1px solid white;
 }
