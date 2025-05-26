@@ -1,8 +1,8 @@
 @media (max-width: 768px) {
   html {
     overflow-x: hidden;
-  scroll-snap-type: y proximity;
-  scroll-behavior: auto;
+  scroll-snap-type: none;
+  scroll-behavior: smooth;
   /* `scroll-snap-points-y` is deprecated, remove it */
   }
 * {
@@ -20,7 +20,6 @@ body {
   background: url("../img/background.png") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
-  height: calc(210vh + 800px) !important;
 }
 
 section {
@@ -56,22 +55,24 @@ section {
 
 #logo {
   position: absolute;
-  width: 20rem;
-  top: 13%;
+  width: 80vw;
+  top: 3.5%;
   left:0;
   right:0;
+  margin-top:5px;
   margin:auto;
   text-align: center;
+  bottom:auto;
 }
 
 #logo.scrolled {
-  z-index: 1000;
   position: absolute;
-  width: 20rem;
+  width: 80vw;
+  margin-top:5px;
   margin:auto;
   left:0;
   right:0;
-  top: 13%;
+  top: 3.5%;
   transform: none;
   text-align: center;
 }
