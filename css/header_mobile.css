@@ -1,35 +1,103 @@
 @media (max-width: 768px) {
-  * {
-    box-sizing: border-box;
-    font-family: 'Futura', sans-serif;
-  }
-  header {
-    padding: 10px 20px;
-    top:0px;
-    width:95%;
-  }
-
-  header h1 {
-    font-size: 1.2rem;
+  .burger {
+    display: block;
+    font-size: 1.8rem;
+    color: #F7EFE8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
   }
 
   nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 4px;
+    display: none; /* ascundem meniul standard pe mobil */
   }
 
-  nav a {
-    padding:10px 2px;
-    flex: 1 1 auto;
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px; /* mai sus decât 60px */
+    left: 5%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.98);
+    padding: 20px 0;
+    gap: 18px;
     text-align: center;
-    font-size: 1rem;
+    z-index: 1050;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    animation: slideDown 0.3s ease-out forwards;
   }
-    nav a:hover {
-    background-color: transparent;
-    color:#F7EFE8;
-    cursor:pointer;
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav-links a {
+    padding: 12px 0;
+    font-size: 1.15rem;
+    color: #F7EFE8;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.2s ease;
+  }
+
+  #nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  #nav-links a:hover {
+    color: #fff;
+    background: transparent;
+  }
+
+  .desktop-lang {
+    display: none;
+  }
+
+  .mobile-lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: -10px; /* opțional pentru a le apropia de meniul de navigație */
+  padding: 0 0 10px 0;
+  width: 100%;
+}
+
+.mobile-lang .lang {
+  font-size: 1rem;
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #F7EFE8;
+  background: transparent;
+  transition: all 0.2s ease;
+  min-width: 60px;
+  text-align: center;
+}
+
+.mobile-lang .lang.active {
+  background-color: #F7EFE8;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mobile-lang .lang:hover {
+  background-color: #F7EFE8;
+  color: #000;
+}
+
 }
