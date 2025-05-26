@@ -15,6 +15,7 @@ html {
   background: url("../img/background.png")
 }
 body {
+  overflow-x: hidden;
   margin: 0;
   background: url("../img/background.png") no-repeat center center fixed;
   background-size: cover;
@@ -30,8 +31,7 @@ section {
   gap: 3rem;
   height: 100vh;
   flex-direction: row-reverse;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+  scroll-snap-align: none;
   margin-left: 0; /* Remove negative margin on mobile */
 }
 #despre {
