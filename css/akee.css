@@ -10,6 +10,7 @@ html {
       font-family: 'Futura', sans-serif;
     }
 body {
+  min-height: 100vh;
     margin: 0;
     background: black;
 }
@@ -39,8 +40,8 @@ section {
   z-index: 810;
   color:white;
   position: absolute;
-  top:12%;
-  left:10vw;
+  top:16%;
+  left:7%;
   bottom:auto;
   font-weight: 300;
   letter-spacing: 2px;
@@ -59,7 +60,7 @@ section {
 #logo.scrolled {
   position: fixed;
   left: 50%;
-  top:10px;
+  top:15px;
   width: 130px;
   z-index:810;
   transform: translateX(-50%);
@@ -73,7 +74,7 @@ section {
     align-items: center;
     text-align: center;
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 700;
     color: white;
     width:50vw;
     padding-bottom:15px;

@@ -6,7 +6,10 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: -5%;
-    margin-left:2%;
+    margin-left:-3%;
+  }
+  #servicii {
+    margin-left:0;
   }
 
   .card {

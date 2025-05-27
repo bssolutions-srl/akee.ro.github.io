@@ -2,32 +2,34 @@ const texts = {
     ro: {
         navAbout: "ACASĂ",
         navServices: "SERVICII",
-        sectionTitleServices: "Servicii oferite",
+        titleDescription:"BEATURI, MIXAJ & MASTERIZARE",
+        sectionTitleServices: "SERVICII OFERITE",
         serviceProducingTitle: "PRODUCȚIE",
         serviceProducingDesc: "DAM VIAȚĂ IDEILOR TALE CU PRODUCȚIE PROFESIONALĂ DE MUZICĂ — DE LA BEAT LA PIESĂ COMPLETĂ.",
         serviceMixingTitle: "MIXAJ",
         serviceMixingDesc: "CURAT, ECHILIBRAT, PUTERNIC. SERVICIUL NOSTRU DE MIXAJ FACE PIESA TA CLARĂ ȘI PREGĂTITĂ PENTRU RADIO.",
         serviceMasteringTitle: "MASTERIZARE",
         serviceMasteringDesc: "TARE, POLISAT, PREGĂTIT PENTRU INDUSTRIE. MASTERIZAREA CARE DĂ PIESIEI TALE ATINGEREA FINALĂ.",
-        buyBeatsTitle: "Cumpără beat-uri",
-        contactTitle: "Contact",
-        contactEmail: "Email: ",
-        contactPhone: "Telefon: "
+        buyBeatsTitle: "CUMPĂRĂ BEAT-URI",
+        contactTitle: "CONTACT",
+        contactEmail: "EMAIL: ",
+        contactPhone: "TELEFON: "
     },
     en: {
         navAbout: "HOME",
         navServices: "SERVICES",
-        sectionTitleServices: "Offered services",
+        titleDescription:"BEATS, MIX & MASTERING",
+        sectionTitleServices: "OFFERED SERVICES",
         serviceProducingTitle: "PRODUCING",
         serviceProducingDesc: "WE BRING YOUR IDEAS TO LIFE WITH PROFESSIONAL MUSIC PRODUCTION — FROM BEAT TO FULL TRACK.",
         serviceMixingTitle: "MIXING",
         serviceMixingDesc: "CLEAN, BALANCED, POWERFUL. OUR MIXING SERVICE MAKES YOUR TRACK SOUND CLEAR AND RADIO-READY.",
         serviceMasteringTitle: "MASTERING",
         serviceMasteringDesc: "LOUD, POLISHED, INDUSTRY-READY. MASTERING THAT GIVES YOUR SONG THE FINAL TOUCH.",
-        buyBeatsTitle: "Buy beats",
-        contactTitle: "Contact",
-        contactEmail: "Email: ",
-        contactPhone: "Phone: "
+        buyBeatsTitle: "BUY BEATS",
+        contactTitle: "CONTACT",
+        contactEmail: "EMAIL: ",
+        contactPhone: "PHONE: "
     }
 };
 
@@ -35,7 +37,8 @@ function switchLanguage(lang) {
     localStorage.setItem('language', lang); // ✅ salvăm limba
 
     // Nav links
-    const navLinks = document.querySelectorAll("#nav-links a");
+    document.querySelector(".title_description").textContent=texts[lang].titleDescription;
+    const navLinks = document.querySelectorAll(".bottom-nav a");
     if (navLinks.length >= 2) {
         navLinks[0].textContent = texts[lang].navAbout;
         navLinks[1].textContent = texts[lang].navServices;
@@ -70,15 +73,14 @@ function switchLanguage(lang) {
 
     // Update active button styling
     document.querySelectorAll('.lang').forEach(btn => {
-        btn.classList.toggle('active', btn.id === 'btn-' + lang || btn.id === 'btn-' + lang + '-mobile');
+        console.log("hei")
+        btn.classList.toggle('active', btn.id === 'lang_' +lang+'_button');
     });
 }
 
 // ✅ Adaugă evenimente
-document.getElementById('btn-ro')?.addEventListener('click', () => switchLanguage('ro'));
-document.getElementById('btn-en')?.addEventListener('click', () => switchLanguage('en'));
-document.getElementById('btn-ro-mobile')?.addEventListener('click', () => switchLanguage('ro'));
-document.getElementById('btn-en-mobile')?.addEventListener('click', () => switchLanguage('en'));
+document.getElementById('lang_ro_button')?.addEventListener('click', () => switchLanguage('ro'));
+document.getElementById('lang_en_button')?.addEventListener('click', () => switchLanguage('en'));
 
 // ✅ Aplică limba salvată la încărcare
 window.addEventListener('DOMContentLoaded', () => {

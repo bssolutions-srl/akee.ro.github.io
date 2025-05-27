@@ -27,175 +27,167 @@
 </head>
 
 <body>
-    <header>
-        <button class="burger" id="burger-btn" aria-label="Meniu mobil">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="lang-switcher desktop-lang">
-            <button id="btn-ro" class="lang active">RO</button>
-            <button id="btn-en" class="lang">EN</button>
-        </div>
-
-        <nav id="nav-links">
-            <div class="lang-switcher mobile-lang">
-                <button id="btn-ro-mobile" class="lang active">RO</button>
-                <button id="btn-en-mobile" class="lang">EN</button>
-            </div>
-            <a href="#despre" id="nav-about">HOME</a>
-            <a href="#servicii" id="nav-portfolio">SERVICES</a>
-            <a href="#buy_beats"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
-        </nav>
-    </header>
     <div id="vanta-wrapper">
         <h3 class="title_description">BEATS, MIX & MASTERING</h3>
         <img id="logo" src="./img/logo_transparent_trimmed.png" alt="logo" />
-        <section id="despre" style="margin-top:1%">
-            <div class="descriere-about-me">
-                <iframe id="myIframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/playlist/22vrvrWSGD2nvRSvjzGHf4?utm_source=generator&theme=0"
-                    width="100%" height="400" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-            </div>
-        </section>
-        <section id="servicii">
-            <h2 class="section-title">Offered services</h2>
-            <div class="services">
-                <div class="card" data-aos="fade-up">
-                    <div class="card_title">
-                        <h3>PRODUCING</h3>
-                        <img src="img/sound.png" alt="HTML Icon" class="service_icon" />
-                    </div>
-                    <p>WE BRING YOUR IDEAS TO LIFE WITH PROFESSIONAL MUSIC PRODUCTION — FROM BEAT TO FULL TRACK.</p>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card_title">
-                        <h3>MIXING</h3>
-                        <img src="img/icon-mixing.png" alt="HTML Icon" class="service_icon" />
-                    </div>
-                    <p>CLEAN, BALANCED, POWERFUL. OUR MIXING SERVICE MAKES YOUR TRACK SOUND CLEAR AND RADIO-READY.</p>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="card_title">
-                        <h3>MASTERING</h3>
-                        <img src="img/master.png" alt="HTML Icon" class="service_icon" />
-                    </div>
-                    <p>LOUD, POLISHED, INDUSTRY-READY. MASTERING THAT GIVES YOUR SONG THE FINAL TOUCH.</p>
+        <header>
+            <div class="top-header">
+                <div class="lang-switcher">
+                    <button id="lang_ro_button" class="lang">RO</button>
+                    <button id="lang_en_button" class="lang active">EN</button>
                 </div>
             </div>
-        </section>
-        <section id="buy_beats">
-            <h2 class="section-title">Buy beats</h2>
-            <iframe id="myiframe" style="border-radius: 12px" src="https://player.beatstars.com/?storeId=150504"
-                width="100%" height="400" loading="lazy"> -- none -- </iframe>
-        </section>
+        </header>
+        <nav class="bottom-nav">
+            <a href="#lang_ro_button" id="nav-about">HOME</a>
+            <a href="#services" id="nav-portfolio">SERVICES</a>
+            <a href="#beaturi" id="nav-contact">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
+        </nav>
         <div class="social-bar">
             <div class="line top"></div>
             <div class="icons">
-                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@eusuntakee" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/eusuntakee/" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.beatstars.com/akeeprod" target="_blank" class="beatstars"
+                    style="padding:0; margin:0; display:flex;">
+                    <img src="./img/beatstars-seeklogo.png"
+                        style="width:1.5rem;height:1.5rem;padding:0;margin:0;justify-self: center; align-self:center" />
+                </a>
                 <a href="https://open.spotify.com/artist/7GV430mWFjTocfpdDZQTfK?si=xn0_8OZiQt-cIPLOqzke_Q"
                     target="_blank" class="spotify"><i class="fab fa-spotify"></i></a>
             </div>
             <div class="line bottom"></div>
         </div>
-        <footer id="contact">
-            <h2 class="section-title">Contact</h2>
-            <div class="footer-contact">
-                <p>Email: <a href="mailto:exemplu@email.com">akeeprod@gmail.com</a></p>
-                <p>Telefon: <a href="tel:+40712345678">+40 758 701 140</a></p>
+        <div id="wrapper">
+            <div class="title_section">
+                <section id="despre" style="margin-top:1%">
+                    <div class="descriere-about-me">
+                        <iframe id="myIframe" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/playlist/22vrvrWSGD2nvRSvjzGHf4?utm_source=generator&theme=0"
+                            width="100%" height="400" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                </section>
+                <section id="servicii">
+                    <h2 class="section-title" id="services">OFFERED SERVICES</h2>
+                    <div class="services">
+                        <div class="card" data-aos="fade-up">
+                            <div class="card_title">
+                                <h3>PRODUCING</h3>
+                                <img src="img/sound.png" alt="HTML Icon" class="service_icon" />
+                            </div>
+                            <p>WE BRING YOUR IDEAS TO LIFE WITH PROFESSIONAL MUSIC PRODUCTION — FROM BEAT TO FULL TRACK.
+                            </p>
+                        </div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card_title">
+                                <h3>MIXING</h3>
+                                <img src="img/icon-mixing.png" alt="HTML Icon" class="service_icon" />
+                            </div>
+                            <p>CLEAN, BALANCED, POWERFUL. OUR MIXING SERVICE MAKES YOUR TRACK SOUND CLEAR AND
+                                RADIO-READY.
+                            </p>
+                        </div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="card_title">
+                                <h3>MASTERING</h3>
+                                <img src="img/master.png" alt="HTML Icon" class="service_icon" />
+                            </div>
+                            <p>LOUD, POLISHED, INDUSTRY-READY. MASTERING THAT GIVES YOUR SONG THE FINAL TOUCH.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="buy_beats">
+                    <h2 class="section-title" id="beaturi">Buy beats</h2>
+                    <iframe id="myiframe" style="border-radius: 12px" src="https://player.beatstars.com/?storeId=150504"
+                        width="100%" height="400" loading="lazy"> -- none -- </iframe>
+                </section>
+
+                <footer id="contact">
+                    <h2 class="section-title">CONTACT</h2>
+                    <div class="footer-contact">
+                        <p>Email: <a href="mailto:exemplu@email.com">akeeprod@gmail.com</a></p>
+                        <p>Telefon: <a href="tel:+40712345678">+40 758 701 140</a></p>
+                    </div>
+                </footer>
             </div>
-        </footer>
-    </div>
-    <script src="./js/lang.js"></script>
-    <script src="./js/logo-move.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        window.onload = function () {
-            const burger = document.querySelector(".burger");
-            const navLinks = document.getElementById("nav-links");
+        </div>
+        <script src="./js/lang.js"></script>
+        <script src="./js/logo-move.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            window.onload = function () {
+                const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-            // Toggle burger menu
-            if (burger) {
-                burger.addEventListener("click", () => {
-                    navLinks.classList.toggle("show");
+                // ✅ VANTA.FOG init
+                VANTA.FOG({
+                    el: "#vanta-wrapper",
+                    mouseControls: true,
+                    touchControls: true,
+                    minHeight: isMobile ? 2000 : 3500,
+                    minWidth: 200.00,
+                    highlightColor: isMobile ? 0x999999 : 0x999999,
+                    midtoneColor: isMobile ? 0x333333 : 0x333333,
+                    lowlightColor: isMobile ? 0x000033 : 0x000033,
+                    baseColor: 0x000000,
+                    blurFactor: isMobile ? 0.5 : 0.4,
+                    speed: isMobile ? 0.5 : 0.5,
+                    zoom: isMobile ? 0.6 : 0.6
                 });
-            }
 
-            // Close menu when clicking on a nav link
-            navLinks.addEventListener("click", () => {
-                navLinks.classList.remove("show");
-            });
-            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
-            // ✅ VANTA.FOG init
-            VANTA.FOG({
-                el: "#vanta-wrapper",
-                mouseControls: true,
-                touchControls: true,
-                minHeight: isMobile ? 2000 : 3500,
-                minWidth: 200.00,
-                highlightColor: isMobile ? 0x999999 : 0xffffff,
-                midtoneColor: isMobile ? 0x333333 : 0xffffff,
-                lowlightColor: isMobile ? 0x000033 : 0xffffff,
-                baseColor: 0x000000,
-                blurFactor: isMobile ? 0.5 : 0.6,
-                speed: isMobile ? 0.5 : 0.4,
-                zoom: isMobile ? 0.6 : 0.2
-            });
-
-            // ✅ AOS init
-            AOS.init({
-                duration: 800,
-                once: true,
-                disable: function () {
-                    // Return true for mobile devices to disable animations
-                    return window.innerWidth < 768;
-                }
-            });
-
-            // ✅ iOS Safari scroll fix
-            const isIosSafari = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/);
-            const isMobileSafari = isIosSafari && window.innerWidth < 768;
-            if (isMobileSafari) {
-                const logDiv = document.createElement('div');
-                logDiv.style.height = '0px';
-                logDiv.style.overflow = 'hidden';
-                document.body.appendChild(logDiv);
-
-                function updateLog() {
-                    logDiv.innerHTML = window.scrollY.toFixed(0);
-                }
-
-                window.addEventListener('scroll', updateLog, { passive: true, capture: true });
-                window.addEventListener('touchstart', updateLog, { passive: true, capture: true });
-                window.addEventListener('touchmove', updateLog, { passive: true, capture: true });
-                window.addEventListener('touchend', updateLog, { passive: true, capture: true });
-            }
-
-            // ✅ Scroll anchor smooth center
-            document.querySelectorAll('a[href^="#"]').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const scrollToPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight + 100;
-
-                        window.scrollTo({
-                            top: scrollToPosition,
-                            behavior: 'smooth'
-                        });
+                // ✅ AOS init
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    disable: function () {
+                        // Return true for mobile devices to disable animations
+                        return window.innerWidth < 768;
                     }
                 });
-            });
-        };
-    </script>
+
+                // ✅ iOS Safari scroll fix
+                const isIosSafari = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/);
+                const isMobileSafari = isIosSafari && window.innerWidth < 768;
+                if (isMobileSafari) {
+                    const logDiv = document.createElement('div');
+                    logDiv.style.height = '0px';
+                    logDiv.style.overflow = 'hidden';
+                    document.body.appendChild(logDiv);
+
+                    function updateLog() {
+                        logDiv.innerHTML = window.scrollY.toFixed(0);
+                    }
+
+                    window.addEventListener('scroll', updateLog, { passive: true, capture: true });
+                    window.addEventListener('touchstart', updateLog, { passive: true, capture: true });
+                    window.addEventListener('touchmove', updateLog, { passive: true, capture: true });
+                    window.addEventListener('touchend', updateLog, { passive: true, capture: true });
+                }
+
+                // ✅ Scroll anchor smooth center
+                document.querySelectorAll('a[href^="#"]').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            const headerHeight = document.querySelector('header').offsetHeight;
+                            const scrollToPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                            window.scrollTo({
+                                top: scrollToPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            };
+        </script>
 </body>
 
 </html>

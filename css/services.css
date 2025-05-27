@@ -3,22 +3,23 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10%;
     margin-top: 20px;
-    width:70%;
-    margin-left:-2%;
+    width:80%;
+    margin-left:-3%;
   }
 #servicii {
   flex-direction: column;
   justify-content: center;
   align-items:center;
+  gap:6%;
   margin-left:1%;
 }
   .card {
     height:25rem;
     border: 1px solid #F7EFE8;
-    padding: 20px 3rem;
+    padding: 20px 2rem;
     border-radius: 8px;
     color:#F7EFE8;
-    width:120%;
+    width:130%;
   }
   .card_title {
     width:100%;

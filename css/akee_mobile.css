@@ -1,8 +1,8 @@
 @media (max-width: 768px) {
   html {
-    overflow-x: hidden;
   scroll-snap-type: none;
   scroll-behavior: smooth;
+  overflow-x:hidden;
   /* `scroll-snap-points-y` is deprecated, remove it */
   }
 * {
@@ -11,24 +11,22 @@
   padding: 0;
   font-family: 'Futura', sans-serif;
 }
-html {
-  background: url("../img/background.png")
-}
 body {
-  overflow-x: hidden;
   margin: 0;
-  background: url("../img/background.png") no-repeat center center fixed;
+  overflow-y:visible;
   background-size: cover;
   min-height: 100vh;
 }
-
+#wrapper {
+  overflow-x: hidden;
+}
 section {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 12vh 8%;
   gap: 3rem;
-  height: 100vh;
+  height: 80vh;
   flex-direction: row-reverse;
   scroll-snap-align: none;
   margin-left: 0; /* Remove negative margin on mobile */
@@ -59,7 +57,7 @@ section {
 #logo {
   position: absolute;
   width: 80vw;
-  top: 3.5%;
+  top: 4%;
   left:0;
   right:0;
   margin-top:5px;
@@ -75,14 +73,15 @@ section {
   margin:auto;
   left:0;
   right:0;
-  top: 3.5%;
+  top: 4%;
   transform: none;
   text-align: center;
 }
 .section-title {
   padding-top:10%;
-  width:70vw;
-  font-size: 2rem;
+  width:90vw;
+  font-weight: 700;
+  font-size: 1.7rem;
 }
 
 }

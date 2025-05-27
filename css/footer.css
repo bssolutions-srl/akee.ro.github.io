@@ -8,7 +8,7 @@ footer { /* sau culoarea generală de fundal */
 footer .section-title {
     margin-bottom: 20px;
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 700;
 }
 
 .footer-contact p {
@@ -26,7 +26,7 @@ footer .section-title {
     text-decoration: underline;
 }
 footer#contact {
-    height: 100vh;          /* să fie full viewport, ca secțiunile */
+    height: 80vh;          /* să fie full viewport, ca secțiunile */
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;

@@ -1,18 +1,17 @@
+let lastScroll = window.scrollY;
 
-    let lastScroll = window.scrollY;
+window.addEventListener('scroll', () => {
+  const logo = document.getElementById('logo');
+  const currentScroll = window.scrollY;
+  const scrollThreshold = 100; // pragul după care se activează clasa
 
-  window.addEventListener('scroll', () => {
-    const logo = document.getElementById('logo');
-    const currentScroll = window.scrollY;
+  if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+    // Scroll în jos și am depășit pragul
+    logo.classList.add('scrolled');
+  } else if (currentScroll < lastScroll && currentScroll < 100) {
+    // Scroll în sus spre top
+    logo.classList.remove('scrolled');
+  }
 
-    if (currentScroll > lastScroll) {
-      // Scroll în jos
-      logo.classList.add('scrolled');
-    } else if (currentScroll < lastScroll && currentScroll < 100) {
-      // Scroll în sus (dar doar până în top)
-      logo.classList.remove('scrolled');
-    }
-
-    lastScroll = currentScroll;
-  });
-
+  lastScroll = currentScroll;
+});
