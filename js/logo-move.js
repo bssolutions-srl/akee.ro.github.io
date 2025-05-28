@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
   if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
     // Scroll în jos și am depășit pragul
     logo.classList.add('scrolled');
-  } else if (currentScroll < lastScroll && currentScroll < 100) {
+  } else if (currentScroll < lastScroll && currentScroll < 200) {
     // Scroll în sus spre top
     logo.classList.remove('scrolled');
   }
