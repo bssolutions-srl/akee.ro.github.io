@@ -14,7 +14,7 @@ const texts = {
         contactTitle: "CONTACT",
         contactEmail: "EMAIL: ",
         contactPhone: "TELEFON: ",
-        webiste:"SITE REALIZAT DE BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)"
+        webiste:"© SITE REALIZAT DE BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)"
     },
     en: {
         navAbout: "HOME",
@@ -31,7 +31,7 @@ const texts = {
         contactTitle: "CONTACT",
         contactEmail: "EMAIL: ",
         contactPhone: "PHONE: ",
-        webiste:"WEBSITE MADE BY BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)"
+        webiste:"© WEBSITE MADE BY BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)"
     }
 };
 
@@ -71,8 +71,8 @@ function switchLanguage(lang) {
     if (footerContact) {
         footerContact.querySelector('p:nth-child(1)').innerHTML = `${texts[lang].contactEmail} <a href="mailto:exemplu@email.com">akeeprod@gmail.com</a>`;
         footerContact.querySelector('p:nth-child(2)').innerHTML = `${texts[lang].contactPhone} <a href="tel:+40712345678">+40 758 701 140</a>`;
-        footerContact.querySelector('p:nth-child(3)').innerHTML = `${texts[lang].webiste}`;
     }
+    document.getElementById("website").innerHTML=`${texts[lang].webiste}`;
 
     // Update active button styling
     document.querySelectorAll('.lang').forEach(btn => {
