@@ -3,7 +3,7 @@ let lastScroll = window.scrollY;
 window.addEventListener('scroll', () => {
   const logo = document.getElementById('logo');
   const currentScroll = window.scrollY;
-  const scrollThreshold = 100; // pragul după care se activează clasa
+  const scrollThreshold = 200; // pragul după care se activează clasa
 
   if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
     // Scroll în jos și am depășit pragul
