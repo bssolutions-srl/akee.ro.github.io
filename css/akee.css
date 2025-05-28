@@ -25,6 +25,9 @@ section {
       margin-left:-10%;
       scroll-snap-align: center;
     }
+    #despre {
+      scroll-snap-align:start;
+    }
   #descriere {
 
     justify-content: center;
