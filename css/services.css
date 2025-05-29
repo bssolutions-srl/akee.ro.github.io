@@ -1,45 +1,70 @@
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10%;
-    margin-top: 20px;
-    width:80%;
-    margin-left:-3%;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10%;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: -3%;
+}
+
 #servicii {
   flex-direction: column;
   justify-content: center;
-  align-items:center;
-  gap:6%;
-  margin-left:1%;
+  align-items: center;
+  gap: 6%;
+  margin-left: 1%;
 }
-  .card {
-    height:25rem;
-    border: 1px solid #F7EFE8;
-    padding: 20px 2rem;
-    border-radius: 8px;
-    color:#F7EFE8;
-    width:130%;
-  }
-  .card_title {
-    width:100%;
-    height: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px; /* spațiu între titlu și iconiță */
-  }
-  
-  .card_title h3 {
-    margin-right: 0; /* elimină marginile implicite dacă vrei o aliniere mai curată */
-    font-size: 126%;
-  }
-  .card p {
-    line-height:1.8rem;
-  }
-    .service_icon {
-    margin-right: 10px;
-    margin-top: -7px;
-    width: 50px;
-    height: 50px;
-  }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 25rem;
+  border: 1px solid #F7EFE8;
+  padding: 20px 2rem;
+  border-radius: 8px;
+  color: #F7EFE8;
+  width: 130%;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.02);
+  /* opțional, pentru contrast */
+}
+
+.card .price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  /* auriu pal */
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: auto;
+  /* Împinge elementul jos */
+}
+
+.card_title {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  /* spațiu între titlu și iconiță */
+}
+
+.card_title h3 {
+  margin-right: 0;
+  /* elimină marginile implicite dacă vrei o aliniere mai curată */
+  font-size: 126%;
+}
+
+.card p {
+  line-height: 1.8rem;
+}
+
+.service_icon {
+  margin-right: 10px;
+  margin-top: -7px;
+  width: 50px;
+  height: 50px;
+}

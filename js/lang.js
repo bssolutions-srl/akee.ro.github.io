@@ -14,7 +14,10 @@ const texts = {
         contactTitle: "CONTACT",
         contactEmail: "EMAIL: ",
         contactPhone: "TELEFON: ",
-        webiste:"© SITE REALIZAT DE BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)"
+        webiste:"© SITE REALIZAT DE BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)",
+        priceProducing:"Pornind de la: 200 lei",
+        priceMixing:"Pornind de la: 50 lei",
+        priceMastering:"Pornind de la: 50 lei"
     },
     en: {
         navAbout: "HOME",
@@ -31,7 +34,10 @@ const texts = {
         contactTitle: "CONTACT",
         contactEmail: "EMAIL: ",
         contactPhone: "PHONE: ",
-        webiste:"© WEBSITE MADE BY BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)"
+        webiste:"© WEBSITE MADE BY BUSINESS SOFT SOLUTIONS (bssolutions.ro@gmail.com)",
+        priceProducing:"Starting from: 50$",
+        priceMixing:"Starting from: 10$",
+        priceMastering:"Starting from 10$"
     }
 };
 
@@ -78,6 +84,9 @@ function switchLanguage(lang) {
     document.querySelectorAll('.lang').forEach(btn => {
         btn.classList.toggle('active', btn.id === 'lang_' +lang+'_button');
     });
+    document.getElementById('price_producing').innerHTML=`${texts[lang].priceProducing}`;
+    document.getElementById('price_mixing').innerHTML=`${texts[lang].priceMixing}`;
+    document.getElementById('price_mastering').innerHTML=`${texts[lang].priceMastering}`;
 }
 
 // ✅ Adaugă evenimente
