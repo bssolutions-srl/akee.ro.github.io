@@ -76,7 +76,6 @@ function switchLanguage(lang) {
 
     // Update active button styling
     document.querySelectorAll('.lang').forEach(btn => {
-        console.log("hei")
         btn.classList.toggle('active', btn.id === 'lang_' +lang+'_button');
     });
 }

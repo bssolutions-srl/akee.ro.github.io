@@ -66,7 +66,7 @@
                 <section id="despre" style="margin-top:1%">
                     <div class="descriere-about-me">
                         <iframe id="myIframe" style="border-radius:12px"
-                            src="https://open.spotify.com/embed/playlist/22vrvrWSGD2nvRSvjzGHf4?utm_source=generator&theme=0"
+                            data-src="https://open.spotify.com/embed/playlist/22vrvrWSGD2nvRSvjzGHf4?utm_source=generator&theme=0"
                             width="100%" height="400" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                             loading="lazy"></iframe>
@@ -103,8 +103,9 @@
                 </section>
                 <section id="buy_beats">
                     <h2 class="section-title" id="beaturi">Buy beats</h2>
-                    <iframe id="myiframe" style="border-radius: 12px" src="https://player.beatstars.com/?storeId=150504"
-                        width="100%" height="400" loading="lazy"> -- none -- </iframe>
+                    <iframe id="myiframe" style="border-radius: 12px"
+                        data-src="https://player.beatstars.com/?storeId=150504" width="100%" height="400"
+                        loading="lazy"></iframe>
                 </section>
 
                 <footer id="contact">
@@ -117,6 +118,13 @@
                 </footer>
             </div>
         </div>
+        <div id="cookie-banner"
+            style="position: fixed; bottom: 0; left: 0; right: 0; background: #111; color: white; padding: 1rem; z-index: 1000; display: none; text-align: center;">
+            This site uses third-party cookies from Spotify and BeatStars. By clicking "Accept", you agree to their use.
+            <button id="accept-cookies"
+                style="margin-left: 1rem; padding: 0.5rem 1rem; background: #fff; color: #111; border: none; cursor: pointer;">Accept</button>
+        </div>
+        <script src="./js/cookies.js"></script>
         <script src="./js/lang.js"></script>
         <script src="./js/logo-move.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
