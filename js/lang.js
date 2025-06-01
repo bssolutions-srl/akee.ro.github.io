@@ -76,7 +76,7 @@ function switchLanguage(lang) {
     const footerContact = document.querySelector('.footer-contact');
     if (footerContact) {
         footerContact.querySelector('p:nth-child(1)').innerHTML = `${texts[lang].contactEmail} <a href="mailto:exemplu@email.com">akeeprod@gmail.com</a>`;
-        footerContact.querySelector('p:nth-child(2)').innerHTML = `${texts[lang].contactPhone} <a href="tel:+40712345678">+40 758 701 140</a>`;
+        footerContact.querySelector('p:nth-child(2)').innerHTML = `${texts[lang].contactPhone} <a href="tel:+40758701140">+40 758 701 140</a>`;
     }
     document.getElementById("website").innerHTML=`${texts[lang].webiste}`;
 
